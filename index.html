@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 件（含 eBay 显示为 10+ 的）、总价不超过目标价 130% 的显卡和内存。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-07 20:12</b></span>
-    <span>本轮 <b>58 次搜索页（57 成功 · 1 次失败：Ada5880 “5880+ada” 第 1 页 _sop=15，重试后仍失败，5880 Ada 覆盖不完整）· 商品页核查 373 次（全部重新抓取；373 中 371 返回正常，287664212868、128119104475 两次返回错误页，沿用缓存的不符合结论）· 卖家注册时间 8 个卖家（4lcorp 店铺页返回 410，显示未显示）</b></span>
-    <span>增量 <b>合格清单 11 条，与上一轮相同；新出现的合格商品 0 条；消失的合格商品 0 条；重新核对 373（本轮未走缓存增量，全部重抓）；沿用缓存 0</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-07 21:44</b></span>
+    <span>本轮 <b>58 次搜索页（58 成功 · 0 失败；上一轮失败的 Ada5880 “5880+ada” 第 1 页 _sop=15 本轮已成功）· 商品页核查 18 次（11 条合格项重新核对、5 条新出现项、2 条上一轮返回错误的项；18 次全部返回正常）· 卖家注册时间 8 个卖家（4lcorp 店铺页返回 410，显示未显示）</b></span>
+    <span>增量 <b>合格清单 11 条，与上一轮相同；新出现的合格商品 0 条；消失的合格商品 0 条；新出现但不合格 5 条；消失（不合格）5 条；重新核对 18；沿用缓存 355</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -69,7 +69,7 @@ a:hover{text-decoration:underline}
     <ul>
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和"超目标 %"按每个型号单独设置。</li>
       <li>数量门槛：可买数量超过 10。eBay 把大数量显示成"10+"，真实库存看不出来，页面标"10+（上限显示）"。</li>
-      <li>已排除：支架/挡板/retention/extender/precision/charger/owc/dispenser/rear 等配件、笔记本与 MXM 模块（如 Dell Precision 7530 P2000）、非 ECC 内存、坏件、4Rx4/LRDIMM 内存；数量恰为 10 的（A5000、P2000 127540964888、DDR4 267830265719）不算。散热方式没有逐件读取，购买前请确认带风扇。</li>
+      <li>已排除：支架/挡板/retention/extender/precision/charger/owc/dispenser/rear 等配件、笔记本与 MXM 模块（如 Dell Precision 7530 P2000）、非 ECC 内存、坏件、4Rx4/LRDIMM 内存；数量恰为 10 的（A5000、P2000 127540964888、DDR4 267830265719）不算；数量隐藏（hidden）或仅剩 Last one 的也不算。散热方式没有逐件读取，购买前请确认带风扇。</li>
     </ul>
   </div>
 </div>
@@ -79,17 +79,17 @@ a:hover{text-decoration:underline}
 var PS={"126691609549": ["1099.99", "Free"], "137902634823": ["79.99", "Free"], "168773701687": ["995.00", "Free"], "178548669288": ["195.00", "US $14.85"], "196479531589": ["89.99", "Free"], "196645138474": ["89.99", "Free"], "198739480053": ["219.99", "Free"], "278247093108": ["914.99", "Free"], "334997547855": ["89.00", "Free"], "800577447277": ["449.99", "Free"], "880065571248": ["46.99", "Free"]};
 var SM={"126691609549": ["wazno", "Jul 18, 2014"], "137902634823": ["4lcorp", "未显示"], "168773701687": ["Rhino Technology Group（rhinotechnologygroup）", "Aug 30, 2005"], "178548669288": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"], "196479531589": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "196645138474": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198739480053": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "278247093108": ["Techgroup2000", "Apr 12, 2004"], "334997547855": ["Computer Palace 786（computerpalace786）", "Jun 23, 2011"], "800577447277": ["Wisetek Market（wisetekca）", "Sep 17, 2018"], "880065571248": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"]};
 var D=[
- ["A4000", "126691609549", 1099.99, 900, "10+a", "75", "46820 / 99.7%", "PNY TECHNOLOGIES NVIDIA RTX A4000 16GB Workstation Graphics Card"],
- ["RTX 6000", "168773701687", 995.0, 800, "10+a BO", "1", "12830 / 99.9%", "NVIDIA 699-5G150-0510-506 Quadro RTX 6000 24GB 384-bit PCIE Graphics Card"],
+ ["A4000", "126691609549", 1099.99, 900, "10+a", "75", "46825 / 99.7%", "PNY TECHNOLOGIES NVIDIA RTX A4000 16GB Workstation Graphics Card"],
+ ["RTX 6000", "168773701687", 995.0, 800, "10+a BO", "1", "12831 / 99.9%", "NVIDIA 699-5G150-0510-506 Quadro RTX 6000 24GB 384-bit PCIE Graphics Card"],
  ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2607 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
  ["P2000", "196479531589", 89.99, 70, "10+a", "4", "19103 / 99.9%", "PNY NVIDIA Quadro P2000 5GB GDDR5 Graphics Video Card GPU"],
  ["P2000", "137902634823", 79.99, 70, "10+a", "", "80 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"],
  ["RTX 6000", "278247093108", 914.99, 800, "17a BO", "19", "5090 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
  ["P2000", "334997547855", 89.0, 70, "10+a BO", "262", "8722 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
- ["RTX 5000", "800577447277", 449.99, 425, "10+a", "1", "20193 / 99%", "Dell NVIDIA Quadro RTX 5000, 16GB Graphics Card"],
+ ["RTX 5000", "800577447277", 449.99, 425, "10+a", "1", "20195 / 99%", "Dell NVIDIA Quadro RTX 5000, 16GB Graphics Card"],
  ["RTX 4000", "198739480053", 219.99, 175, "10+a", "", "19103 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
  ["P2000", "196645138474", 89.99, 70, "10+a", "", "19103 / 99.9%", "Lenovo Quadro P2000 5GB GDDR5 4-Port DisplayPort Graphics Video Card GPU"],
- ["P1000", "880065571248", 46.99, 40, "10+a BO", "64", "2607 / 99.7%", "NVIDIA Quadro P1000 4GB GDDR5 4 Mini DP Low Profile Graphics Card"]
+ ["P1000", "880065571248", 46.99, 40, "10+a BO", "65", "2607 / 99.7%", "NVIDIA Quadro P1000 4GB GDDR5 4 Mini DP Low Profile Graphics Card"]
 ];
 function pr(r){var x=PS[r[1]];if(!x)return"—";return"$"+x[0]+(x[1]==="Free"?"（免运费）":x[1]==="?"?"（运费未显示）":"（运费 $"+x[1].replace("US $","")+"）")}
 function sel(r){var x=SM[r[1]]||[];var n=(x[0]&&x[0]!=="?")?x[0]:"卖家名未显示";return n+"<span class=\"t\">注册："+(x[1]||"未显示")+" · 反馈 "+r[6]+"</span>"}
