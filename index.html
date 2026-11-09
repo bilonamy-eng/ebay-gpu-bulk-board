@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 件（含 eBay 显示为 10+ 的）、总价不超过目标价 130% 的显卡和内存。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-07 23:56</b></span>
-    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 14 次（3 个新出现的 ID + 11 个合格商品重新核对；0 个错误页）· 卖家注册时间 8 个卖家（4lcorp 店铺页未显示注册日期）</b></span>
-    <span>增量 <b>合格清单 11 条，与上一轮相同；新出现的合格商品 0 条；消失的合格商品 0 条；新出现的非合格 3 条（237170326022 缺货，158113695368 与 800876965101 数量隐藏）；消失的非合格 3 条；重新核对 14；沿用缓存 355（未重新抓取，见说明）</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-09 18:19</b></span>
+    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 369 次（上一轮完整核对已超过 6 小时，全部重新核对；0 个错误页）· 卖家注册时间 7 个卖家（4lcorp 店铺页未显示注册日期）</b></span>
+    <span>增量 <b>合格清单 9 条；新出现的合格商品 0 条；消失的合格商品 2 条（800577447277 数量降为 10 件，880065571248 数量降为 6 件）；新出现的非合格 30 条；消失的非合格 30 条；重新核对 369；沿用缓存 0</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -69,6 +69,7 @@ a:hover{text-decoration:underline}
     <ul>
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和"超目标 %"按每个型号单独设置。</li>
       <li>数量门槛：可买数量超过 10。eBay 把大数量显示成"10+"，真实库存看不出来，页面标"10+（上限显示）"。</li>
+      <li>观察（未计入合格清单）：RTX A2000 6GB 407348997521，$335 + $5.99 = $340.99（目标 $310，超 10.0%），11 件可买，卖家 easternshorec-baby（641 条，99.8%）；商品规格 Cooling Component Included 为 None，风扇未在照片中核实，注册日期未查。</li>
       <li>已排除：支架/挡板/retention/extender/precision/charger/owc/dispenser/rear 等配件、笔记本与 MXM 模块（如 Dell Precision 7530 P2000）、非 ECC 内存、坏件、4Rx4/LRDIMM 内存；数量恰为 10 的（A5000、P2000 127540964888、DDR4 267830265719）不算；数量隐藏（hidden）或仅剩 Last one 的也不算。散热方式没有逐件读取，购买前请确认带风扇。</li>
     </ul>
   </div>
@@ -76,20 +77,18 @@ a:hover{text-decoration:underline}
 
 <script>
 // [型号, itemId, 总价, 目标价, 数量文本, 售出数(不显示), 卖家反馈, 标题]
-var PS={"178548669288": ["195.00", "US $14.85"], "198739480053": ["219.99", "Free"], "800577447277": ["449.99", "Free"], "278247093108": ["914.99", "Free"], "168773701687": ["995.00", "Free"], "126691609549": ["1099.99", "Free"], "196479531589": ["89.99", "Free"], "196645138474": ["89.99", "Free"], "137902634823": ["79.99", "Free"], "334997547855": ["89.00", "Free"], "880065571248": ["46.99", "Free"]};
-var SM={"178548669288": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"], "198739480053": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "800577447277": ["Wisetek Market（wisetekca）", "Sep 17, 2018"], "278247093108": ["Techgroup2000", "Apr 12, 2004"], "168773701687": ["Rhino Technology Group（rhinotechnologygroup）", "Aug 30, 2005"], "126691609549": ["wazno", "Jul 18, 2014"], "196479531589": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "196645138474": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "137902634823": ["4lcorp", "未显示"], "334997547855": ["Computer Palace 786（computerpalace786）", "Jun 23, 2011"], "880065571248": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"]};
+var PS={"178548669288": ["195.00", "US $14.85"], "198739480053": ["219.99", "Free"], "168773701687": ["995.00", "Free"], "278247093108": ["914.99", "Free"], "126691609549": ["1099.99", "Free"], "334997547855": ["89.00", "Free"], "196479531589": ["89.99", "Free"], "196645138474": ["89.99", "Free"], "137902634823": ["79.99", "Free"]};
+var SM={"178548669288": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"], "198739480053": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "278247093108": ["Techgroup2000", "Apr 12, 2004"], "168773701687": ["Rhino Technology Group（rhinotechnologygroup）", "Aug 30, 2005"], "126691609549": ["wazno", "Jul 18, 2014"], "196479531589": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "196645138474": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "137902634823": ["4lcorp", "未显示"], "334997547855": ["Computer Palace 786（computerpalace786）", "Jun 23, 2011"]};
 var D=[
- ["A4000", "126691609549", 1099.99, 900, "10+a", "75", "46828 / 99.7%", "PNY TECHNOLOGIES NVIDIA RTX A4000 16GB Workstation Graphics Card"],
- ["RTX 6000", "168773701687", 995.0, 800, "10+a BO", "1", "12831 / 99.9%", "NVIDIA 699-5G150-0510-506 Quadro RTX 6000 24GB 384-bit PCIE Graphics Card"],
- ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2607 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
- ["P2000", "196479531589", 89.99, 70, "10+a", "4", "19107 / 99.9%", "PNY NVIDIA Quadro P2000 5GB GDDR5 Graphics Video Card GPU"],
- ["P2000", "137902634823", 79.99, 70, "10+a", "", "80 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"],
- ["RTX 6000", "278247093108", 914.99, 800, "17a BO", "19", "5090 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
- ["P2000", "334997547855", 89.0, 70, "10+a BO", "262", "8722 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
- ["RTX 5000", "800577447277", 449.99, 425, "10+a", "1", "20196 / 99%", "Dell NVIDIA Quadro RTX 5000, 16GB Graphics Card"],
- ["RTX 4000", "198739480053", 219.99, 175, "10+a", "", "19107 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
- ["P2000", "196645138474", 89.99, 70, "10+a", "", "19107 / 99.9%", "Lenovo Quadro P2000 5GB GDDR5 4-Port DisplayPort Graphics Video Card GPU"],
- ["P1000", "880065571248", 46.99, 40, "10+a BO", "66", "2607 / 99.7%", "NVIDIA Quadro P1000 4GB GDDR5 4 Mini DP Low Profile Graphics Card"]
+ ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2613 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
+ ["RTX 4000", "198739480053", 219.99, 175, "10+a", "", "19111 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
+ ["RTX 6000", "168773701687", 995.0, 800, "10+a BO", "1", "12837 / 99.9%", "NVIDIA 699-5G150-0510-506 Quadro RTX 6000 24GB 384-bit PCIE Graphics Card"],
+ ["RTX 6000", "278247093108", 914.99, 800, "17a BO", "19", "5092 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
+ ["A4000", "126691609549", 1099.99, 900, "10+a", "75", "46881 / 99.7%", "PNY TECHNOLOGIES NVIDIA RTX A4000 16GB Workstation Graphics Card"],
+ ["P2000", "334997547855", 89.0, 70, "10+a BO", "262", "8735 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
+ ["P2000", "196479531589", 89.99, 70, "10+a", "4", "19111 / 99.9%", "PNY NVIDIA Quadro P2000 5GB GDDR5 Graphics Video Card GPU"],
+ ["P2000", "196645138474", 89.99, 70, "10+a", "", "19111 / 99.9%", "Lenovo Quadro P2000 5GB GDDR5 4-Port DisplayPort Graphics Video Card GPU"],
+ ["P2000", "137902634823", 79.99, 70, "10+a", "", "81 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"]
 ];
 function pr(r){var x=PS[r[1]];if(!x)return"—";return"$"+x[0]+(x[1]==="Free"?"（免运费）":x[1]==="?"?"（运费未显示）":"（运费 $"+x[1].replace("US $","")+"）")}
 function sel(r){var x=SM[r[1]]||[];var n=(x[0]&&x[0]!=="?")?x[0]:"卖家名未显示";return n+"<span class=\"t\">注册："+(x[1]||"未显示")+" · 反馈 "+r[6]+"</span>"}
