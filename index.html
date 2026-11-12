@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 的（含 eBay 显示为 10+ 的）、总价不超过目标价 130% 的显卡和内存。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-12 16:26</b></span>
-    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 353 次（0 个错误页；缓存没有逐条 R 行，本轮全部重新核对）· 卖家注册时间 本轮重新抓取 9 位卖家（4lcorp 未显示注册时间）</b></span>
-    <span>增量 <b>合格清单 16 条（上轮 16 条）；新出现的合格商品 1 条（178561706062，P1000）；由非合格转为合格 0 条；消失的合格商品 1 条（335021373702，P4000，本轮搜索未出现）；新出现的非合格 17 条；消失的非合格 14 条；重新核对 353；沿用缓存 0</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-12 16:53</b></span>
+    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 353 次（0 个错误页；缓存没有逐条 R 行，本轮全部重新核对）· 卖家注册时间 本轮重新抓取 9 位卖家（全部显示注册时间）</b></span>
+    <span>增量 <b>合格清单 16 条（上轮 16 条）；新出现的合格商品 0 条；由非合格转为合格 0 条；消失的合格商品 0 条；新出现的非合格 1 条（227410386708，缺货）；消失的非合格 1 条（168850796422）；重新核对 353；沿用缓存 0</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -70,6 +70,7 @@ a:hover{text-decoration:underline}
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和"超目标 %"按每个型号单独设置。本轮所有合格商品都在上限以内，但都高于各自目标价。</li>
       <li>数量门槛：可买数量超过 10。eBay 把大数量显示成"More than 10"或"10+"，真实库存看不出来，页面标"10+（上限显示）"。</li>
       <li>风扇：本轮合格商品的商品页文字都提到风扇或散热（198739463304 为 fan shroud，视为带风扇）。</li>
+      <li>137902634823（P2000，$79.99）本轮卖家显示为 starlitpartner（注册 Jun 22, 2017），上一轮记录为 4lcorp，请人工确认。</li>
       <li>已排除：支架、挡板、retention、extender/extenter、OWC、rear、Full Size / Low Profile 托架等配件（如 318820004560、188903910376、206366219236、800430087650、205409077371、287565470137、307189345055、117419026704、198650757800、278331978600、158250081165、137740277029、336731875322、285678566056、336889948950）；笔记本模块（Dell Precision 7530 P2000 157412360587）；非 ECC DDR4（OWC 286520580377 与 277064707148）；数量 ≤10 或显示 3、2 件的 407356505039、168852726500；页面数量隐藏的 287676225253、880077062557、307249285796。</li>
     </ul>
   </div>
@@ -78,7 +79,7 @@ a:hover{text-decoration:underline}
 <script>
 // [型号, itemId, 总价, 目标价, 数量文本, 售出数(不显示), 卖家反馈, 标题]
 var PS={"198786483079": ["199.98", "Free"], "178548669288": ["195.00", "US $14.85"], "198739480053": ["198.99", "Free"], "168773701687": ["995.00", "Free"], "278247093108": ["999.99", "Free"], "198739463304": ["349.99", "Free"], "126691609549": ["1099.99", "Free"], "126888400088": ["2379.99", "Free"], "334997547855": ["89.00", "Free"], "168850935921": ["89.99", "Free"], "196645138474": ["89.99", "Free"], "137902634823": ["79.99", "Free"], "198737615352": ["79.98", "Free"], "196479531589": ["79.99", "Free"], "198731323456": ["79.97", "Free"], "178561706062": ["49.49", "Free"]};
-var SM={"198786483079": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198739480053": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "178548669288": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"], "168773701687": ["Rhino Technology Group（rhinotechnologygroup）", "Aug 30, 2005"], "278247093108": ["Techgroup2000", "Apr 12, 2004"], "198739463304": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "126691609549": ["wazno", "Jul 18, 2014"], "126888400088": ["wazno", "Jul 18, 2014"], "334997547855": ["Computer Palace 786（computerpalace786）", "Jun 23, 2011"], "168850935921": ["Cartridge Man07（cartridgeman07）", "Sep 10, 2007"], "196645138474": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "137902634823": ["4lcorp", "未显示"], "198737615352": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "196479531589": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198731323456": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "178561706062": ["reuseitjax", "Apr 02, 2011"]};
+var SM={"198786483079": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198739480053": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "178548669288": ["Waukegan Computer（waukegancomputer）", "May 15, 2018"], "168773701687": ["Rhino Technology Group（rhinotechnologygroup）", "Aug 30, 2005"], "278247093108": ["Techgroup2000", "Apr 12, 2004"], "198739463304": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "126888400088": ["wazno", "Jul 18, 2014"], "334997547855": ["Computer Palace 786（computerpalace786）", "Jun 23, 2011"], "168850935921": ["Cartridge Man07（cartridgeman07）", "Sep 10, 2007"], "196645138474": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198737615352": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "196479531589": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "198731323456": ["Cirkadis（原 semsotaiusainc）", "Nov 02, 2018"], "178561706062": ["reuseitjax", "Apr 02, 2011"], "137902634823": ["STARLIT PARTNER（starlitpartner）", "Jun 22, 2017"], "126691609549": ["wazno", "Jul 18, 2014"]};
 var D=[
  ["RTX 4000", "198786483079", 199.98, 175, "10+a", "", "19152 / 99.9%", "Dell Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU w Bracket NM0KF"],
  ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2621 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
