@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 的（含 eBay 显示为 10+ 的）、总价不超过目标价 130% 的显卡和内存。阶梯价按 bulk-tier 规则计入（需一次买够档位件数）。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-16 21:58</b></span>
-    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 343 次（341 个搜索结果 + 2 个阶梯价商品直接核查，0 个错误）· 卖家注册时间 本轮抓取 9 位卖家（4lcorp 商店页未显示注册时间）</b></span>
-    <span>增量 <b>合格清单 12 条（上轮 11 条）；新出现的合格商品 1 条；消失的合格商品 0 条；搜索未出现的缓存条目 17 条（均不合格，已移出缓存）；重新核对 343 条；沿用缓存 0 条</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-16 23:07</b></span>
+    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 340 次（340 个搜索结果，0 个错误）· 卖家注册时间 本轮抓取 7 位卖家（4lcorp 商店页未显示注册时间）</b></span>
+    <span>增量 <b>合格清单 10 条（上轮 12 条）；新出现的合格商品 0 条；消失的合格商品 2 条；本轮搜索未出现的缓存条目 21 条；重新核对 340 条；沿用缓存 0 条</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -69,34 +69,30 @@ a:hover{text-decoration:underline}
     <ul>
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和"超目标 %"按每个型号单独设置。本轮所有合格商品都在上限以内，但都高于各自目标价。</li>
       <li>数量门槛：可买数量超过 10。eBay 把大数量显示成"More than 10"或"10+"，真实库存看不出来，页面标"10+（上限显示）"。</li>
-      <li>阶梯价（bulk-tier 规则，2026-11-16）：198739975842（P2200，单件 $129.99，4 件起 $90.99/ea，免运费）按阶梯价计入合格。购买时必须一次买够 4 件，单件价不计入。</li>
-      <li>新增：820361830874（P1000 Low Profile，$44.99 免运费，10+ 可还价，发货地 Scottsdale, AZ，卖家 ifixitusawarehouse）。超目标 12.5%，在 $52 上限内。标题未注明无风扇，请人工确认为主动散热版本。</li>
+      <li>消失：820361830874（P1000 Low Profile，$44.99）与 198739975842（P2200 阶梯价）本轮搜索结果中未再出现，已移出。注意：搜索只按单件价过滤，阶梯价商品若单件价超过上限会被搜索漏掉，需要手动核查。</li>
       <li>仍合格但数量变化：278247093108（RTX 6000）现为 13 件，仍超过 10。</li>
-      <li>不再合格：188264161618（P1000 阶梯价 $47.59/ea，现仅剩 9 件，未超过 10 件门槛）；168773701687（RTX 6000，现为 Last one）。</li>
-      <li>消失：搜索结果中未再出现的缓存条目 17 条，均不是合格商品，已从缓存移除。</li>
-      <li>137902634823（P2000）本轮商品页卖家为 4lcorp（商店页未显示注册时间）。上一版板上写的 piospartslap 是错误的，已更正，请人工确认。</li>
-      <li>已排除：支架、挡板、retention、bracket、extender 等配件（如 318820004560、188903910376、307189345055、336731875322、206366219236）；笔记本 Precision 7530（157412360587）；非 ECC 与多规格 OWC 内存（277064707148、286520580377、277064707261）；4Rx4 LRDIMM（237181346461）。</li>
+      <li>本轮没有新出现的合格商品。</li>
+      <li>137902634823（P2000）卖家 4lcorp（商店页未显示注册时间）。</li>
+      <li>已排除：支架、挡板、retention、bracket、extender 等配件（如 800430098710、336731875322、307189345055、287565470137、336889948950）；4Rx4 LRDIMM（237181346461）。</li>
     </ul>
   </div>
 </div>
 
 <script>
 // [型号, itemId, 总价, 目标价, 数量文本, 售出数, 卖家反馈, 标题]
-var PS={"336794939010":["174.99","US $14.99"],"198739480053":["198.99","Free"],"198786483079":["199.98","Free"],"178548669288":["195.00","US $14.85"],"278247093108":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2379.99","Free"],"334997547855":["89.00","Free"],"168850935921":["89.99","Free"],"137902634823":["79.99","Free"],"198739975842":["90.99","Free"],"820361830874":["44.99","Free"]};
-var SM={"336794939010":["surpluserecycle","Apr 29, 2015"],"198739480053":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"198786483079":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"178548669288":["Waukegan Computer（waukegancomputer）","May 15, 2018"],"278247093108":["Techgroup2000","Apr 12, 2004"],"198739463304":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"334997547855":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"168850935921":["Cartridge Man07（cartridgeman07）","Sep 10, 2007"],"137902634823":["4lcorp","未显示"],"198739975842":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"820361830874":["ifixitusawarehouse","Dec 09, 2019"]};
+var PS={"198786483079":["199.98","Free"],"336794939010":["174.99","US $14.99"],"178548669288":["195.00","US $14.85"],"198739480053":["198.99","Free"],"278247093108":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2379.99","Free"],"334997547855":["89.00","Free"],"168850935921":["89.99","Free"],"137902634823":["79.99","Free"]};
+var SM={"198786483079":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"336794939010":["surpluserecycle","Apr 29, 2015"],"178548669288":["Waukegan Computer（waukegancomputer）","May 15, 2018"],"198739480053":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"278247093108":["Techgroup2000","Apr 12, 2004"],"198739463304":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"334997547855":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"168850935921":["Cartridge Man07（cartridgeman07）","Sep 10, 2007"],"137902634823":["4lcorp","未显示"]};
 var D=[
+ ["RTX 4000", "198786483079", 199.98, 175, "10+a", "", "19189 / 99.9%", "Dell Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU w Bracket NM0KF"],
  ["RTX 4000", "336794939010", 189.98, 175, "10+a", "11", "10740 / 99.4%", "NVIDIA QUADRO RTX 4000 8GB GDDR6 GPU GRAPHICS CARD 699-5G160-0500-810"],
- ["RTX 4000", "198739480053", 198.99, 175, "10+a", "", "19187 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
- ["RTX 4000", "198786483079", 199.98, 175, "10+a", "", "19187 / 99.9%", "Dell Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU w Bracket NM0KF"],
- ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2641 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
+ ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2643 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
+ ["RTX 4000", "198739480053", 198.99, 175, "10+a", "", "19189 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
  ["RTX 6000", "278247093108", 999.99, 800, "13a BO", "22", "5121 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
- ["A2000", "198739463304", 349.99, 310, "10+a", "", "19187 / 99.9%", "Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],
- ["A5000", "126888400088", 2379.99, 2100, "10+a BO", "37", "47407 / 99.7%", "NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],
+ ["A2000", "198739463304", 349.99, 310, "10+a", "", "19189 / 99.9%", "Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],
+ ["A5000", "126888400088", 2379.99, 2100, "10+a BO", "37", "47415 / 99.7%", "NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],
  ["P2000", "334997547855", 89.00, 70, "10+a BO", "262", "8819 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
- ["P2000", "168850935921", 89.99, 70, "10+a", "1", "29189 / 99.8%", "HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"],
- ["P2000", "137902634823", 79.99, 70, "10+a", "5", "84 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"],
- ["P2200", "198739975842", 90.99, 80, "10+a", "", "19187 / 99.9%", "[阶梯价 4 件起 $90.99/ea，需一次买 4 件] HP Nvidia Quadro P2200 5GB GDDR5 Graphics Video Card GPU"],
- ["P1000", "820361830874", 44.99, 40, "10+a BO", "", "33805 / 99.8%", "Nvidia Quadro P1000 4GB GDDR5 Low Profile GPU"]
+ ["P2000", "168850935921", 89.99, 70, "10+a", "1", "29191 / 99.8%", "HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"],
+ ["P2000", "137902634823", 79.99, 70, "10+a", "5", "84 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"]
 ];
 function pr(r){var x=PS[r[1]];if(!x)return"—";return"$"+x[0]+(x[1]==="Free"?"（免运费）":x[1]==="?"?"（运费未显示）":"（运费 $"+x[1].replace("US $","")+"）")}
 function sel(r){var x=SM[r[1]]||[];var n=(x[0]&&x[0]!=="?")?x[0]:"卖家名未显示";return n+"<span class=\"t\">注册："+(x[1]||"未显示")+" · 反馈 "+r[6]+"</span>"}
