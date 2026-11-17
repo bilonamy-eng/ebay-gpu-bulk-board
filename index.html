@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 的（含 eBay 显示为 10+ 的）、总价不超过目标价 130% 的显卡和内存。阶梯价按 bulk-tier 规则计入（需一次买够档位件数）。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-17 16:57</b></span>
-    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 360 次（360 个搜索结果，0 个错误）· 卖家注册时间 本轮抓取 7 位卖家（4lcorp 商店页未显示注册时间）</b></span>
-    <span>增量 <b>合格清单 10 条（上轮 10 条）；新出现的合格商品 0 条；消失的合格商品 0 条；新增非合格 9 条；搜索中消失的缓存条目 4 条；重新核对 360 条；沿用缓存 0 条</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-17 20:56</b></span>
+    <span>本轮 <b>58 次搜索页（58 成功 · 0 次失败）· 商品页核查 363 次（363 个搜索结果，0 个错误）· 卖家注册时间 本轮抓取 2 位（gemelectronic、roberfento82）</b></span>
+    <span>增量 <b>合格清单 12 条（上轮 10 条）；新出现的合格商品 2 条；消失的合格商品 0 条；新增非合格 11 条；搜索中消失的缓存条目 8 条；重新核对 363 条（全部重新抓取）；沿用缓存 0 条</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -69,12 +69,12 @@ a:hover{text-decoration:underline}
     <ul>
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和"超目标 %"按每个型号单独设置。本轮所有合格商品都在上限以内，但都高于各自目标价，因此本轮没有目标价内的商品。</li>
       <li>数量门槛：可买数量超过 10。eBay 把大数量显示成"More than 10"或"10+"，真实库存看不出来，页面标"10+（上限显示）"。</li>
-      <li>消失：本轮没有合格商品消失。搜索中消失的 4 条缓存条目均非合格：389972563522、158371459214、327133105345、366707435357。</li>
-      <li>不再合格：336794939010（RTX 4000，surpluserecycle）当前数量为 10 件，按 &gt;10 规则不计入。</li>
+      <li>本轮新出现的合格商品：168869463828（RTX 4000，gemelectronic，总价 $179.99，10+，可还价）和 287736853043（RTX 4000，roberfento82，总价 $193.70，10+，可还价，不接受退货）。</li>
+      <li>消失：本轮没有合格商品消失。搜索中消失的 8 条缓存条目均非合格：158126140774、227618720495、128198991392、206665945440、267846020486、128199205736、307285923952、307287175030。</li>
+      <li>不再合格：336794939010（RTX 4000）当前数量为 10 件，按 &gt;10 规则不计入。</li>
       <li>仍合格但数量未变：278247093108（RTX 6000）仍为 13 件。</li>
-      <li>本轮没有新出现的合格商品。新出现的 9 条商品（如 960188073624、327419059033、267846080105、307287175030）均为数量隐藏、仅 2 件或非合格，未计入。</li>
       <li>137902634823（P2000）卖家 4lcorp（商店页未显示注册时间）。</li>
-      <li>已排除：配件（支架、挡板、retention、bracket、extender 等，如 206366219236、800430087650、205409077371、188903910376、318820004560、287565470137、307189345055、117419026704、278331978600、198650757800、158250081165、137740277029、336731875322、285678566056、166896806855、318125419468）；笔记本 MXM 模块 157412360587（Dell Precision 7530 P2000 4GB）；4Rx4 LRDIMM 237181346461；DDR4 非 ECC 286520580377、277064707148。</li>
+      <li>已排除：配件（支架、挡板、retention、bracket、extender 等，如 206366219236、800430087650、205409077371、188903910376、318820004560、287565470137、307189345055、117419026704、278331978600、198650757800、158250081165、137740277029、336731875322、285678566056、166896806855、318125419468）；笔记本 MXM 模块 157412360587（Dell Precision 7530 P2000 4GB）；4Rx4 LRDIMM 237181346461、237188306148；DDR4 非 ECC 286520580377、277064707148。</li>
       <li>待核实未纳入：277064707261（OWC 16GB/32GB DDR4 2133 ECC RDIMM，$119.99 包邮，可买 10+）页面未显示 2Rx4 与容量确认，按 2Rx4 规则暂不计入。</li>
       <li>阶梯价：本轮搜索只按单件价过滤并逐一核对商品页的单件价，未专门核对"Buy N or more"阶梯价（bulk-tier 规则）；单件价超过上限的阶梯价商品可能被搜索漏掉。</li>
     </ul>
@@ -83,19 +83,21 @@ a:hover{text-decoration:underline}
 
 <script>
 // [型号, itemId, 总价, 目标价, 数量文本, 售出数, 卖家反馈, 标题]
-var PS={"198786483079":["199.98","Free"],"178548669288":["195.00","US $14.85"],"198739480053":["198.99","Free"],"278247093108":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2379.99","Free"],"335021373702":["170.00","Free"],"334997547855":["89.00","Free"],"168850935921":["89.99","Free"],"137902634823":["79.99","Free"]};
-var SM={"198786483079":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"178548669288":["Waukegan Computer（waukegancomputer）","May 15, 2018"],"198739480053":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"278247093108":["Techgroup2000","Apr 12, 2004"],"198739463304":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"335021373702":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"334997547855":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"168850935921":["Cartridge Man07（cartridgeman07）","Sep 10, 2007"],"137902634823":["4lcorp","未显示"]};
+var PS={"168869463828":["179.99","Free"],"287736853043":["178.00","US $15.70"],"198786483079":["199.98","Free"],"178548669288":["195.00","US $14.85"],"198739480053":["198.99","Free"],"278247093108":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2379.99","Free"],"335021373702":["170.00","Free"],"334997547855":["89.00","Free"],"168850935921":["89.99","Free"],"137902634823":["79.99","Free"]};
+var SM={"168869463828":["gemelectronic","Nov 29, 2022"],"287736853043":["roberfento82（店名 Reversetech2018）","Nov 07, 2017"],"198786483079":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"178548669288":["Waukegan Computer（waukegancomputer）","May 15, 2018"],"198739480053":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"278247093108":["Techgroup2000","Apr 12, 2004"],"198739463304":["Cirkadis（原 semsotaiusainc）","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"335021373702":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"334997547855":["Computer Palace 786（computerpalace786）","Jun 23, 2011"],"168850935921":["Cartridge Man07（cartridgeman07）","Sep 10, 2007"],"137902634823":["4lcorp","未显示"]};
 var D=[
- ["RTX 4000", "198786483079", 199.98, 175, "10+a", "1", "19202 / 99.9%", "Dell Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU w Bracket NM0KF"],
- ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2646 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
- ["RTX 4000", "198739480053", 198.99, 175, "10+a", "", "19202 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
- ["RTX 6000", "278247093108", 999.99, 800, "13a BO", "22", "5123 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
- ["A2000", "198739463304", 349.99, 310, "10+a", "", "19202 / 99.9%", "Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],
- ["A5000", "126888400088", 2379.99, 2100, "10+a BO", "37", "47509 / 99.7%", "NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],
- ["P4000", "335021373702", 170.00, 140, "10+a BO", "251", "8833 / 99.4%", "NVIDIA QUADRO P4000 8GB GDDR5 x4 DP Video Graphics Card"],
- ["P2000", "334997547855", 89.00, 70, "10+a BO", "262", "8833 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
- ["P2000", "168850935921", 89.99, 70, "10+a", "1", "29210 / 99.8%", "HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"],
- ["P2000", "137902634823", 79.99, 70, "10+a", "5", "84 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"]
+ ["RTX 4000", "168869463828", 179.99, 175, "10+a BO", "", "3152 / 99.9%", "NVIDIA Quadro RTX 4000 8GB GDDR6 Turing Workstation Graphics Card"],
+ ["RTX 4000", "287736853043", 193.70, 175, "10+a BO", "", "6011 / 100%", "NVIDIA QUADRO RTX 4000 8GB"],
+ ["RTX 4000", "198786483079", 199.98, 175, "10+a", "1", "19205 / 99.9%", "Dell Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU w Bracket NM0KF"],
+ ["RTX 4000", "178548669288", 209.85, 175, "10+a BO", "10", "2647 / 99.7%", "NVIDIA Quadro RTX 4000 8GB RAM - Graphics Card - Excellent Condition"],
+ ["RTX 4000", "198739480053", 198.99, 175, "10+a", "", "19205 / 99.9%", "HP Nvidia Quadro RTX 4000 8GB GDDR6 Graphics Video Card GPU with Bracket"],
+ ["RTX 6000", "278247093108", 999.99, 800, "13a BO", "22", "5124 / 99.6%", "699-5G150-0510-506 NVIDIA QUADRO RTX 6000 24GB GDDR6 GPU GRAPHICS CARD"],
+ ["A2000", "198739463304", 349.99, 310, "10+a", "", "19205 / 99.9%", "Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],
+ ["A5000", "126888400088", 2379.99, 2100, "10+a BO", "37", "47541 / 99.7%", "NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],
+ ["P4000", "335021373702", 170.00, 140, "10+a BO", "251", "8837 / 99.4%", "NVIDIA QUADRO P4000 8GB GDDR5 x4 DP Video Graphics Card"],
+ ["P2000", "334997547855", 89.00, 70, "10+a BO", "262", "8837 / 99.4%", "Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],
+ ["P2000", "168850935921", 89.99, 70, "10+a", "1", "29214 / 99.8%", "HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"],
+ ["P2000", "137902634823", 79.99, 70, "10+a", "5", "85 / 100%", "NVIDIA Quadro P2000 5GB GDDR5 Workstation Graphics Card – Tested & Working"]
 ];
 function pr(r){var x=PS[r[1]];if(!x)return"—";return"$"+x[0]+(x[1]==="Free"?"（免运费）":x[1]==="?"?"（运费未显示）":"（运费 $"+x[1].replace("US $","")+"）")}
 function sel(r){var x=SM[r[1]]||[];var n=(x[0]&&x[0]!=="?")?x[0]:"卖家名未显示";return n+"<span class=\"t\">注册："+(x[1]||"未显示")+" · 反馈 "+r[6]+"</span>"}
