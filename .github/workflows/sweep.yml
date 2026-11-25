@@ -1,7 +1,7 @@
 name: eBay API bulk sweep
 on:
   schedule:
-    - cron: "47 */2 * * *"   # 每 2 小时一次；脚本自己跳过阿姆斯特丹 01:00–08:00
+    - cron: "32,52 * * * *"   # 每小时两次检查；只有行情板仓库有新一轮数据时才更新，不调用 eBay API
   workflow_dispatch:
 permissions:
   contents: write
@@ -14,19 +14,22 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: bilonamy-eng/ebayGPU_Price
+          path: src
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Query eBay and render board
-        env:
-          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
-          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
-        run: python3 sweep.py --bulk --board ${{ github.event_name == 'schedule' && '--gate' || '' }}
+      - name: Render bulk board from the latest shared sweep
+        run: |
+          cp src/sweep.py sweep.py
+          python3 sweep.py --bulk --board --from-json=src/api_sweep_latest.json
       - name: Commit board
         run: |
-          if git diff --quiet -- index.html; then echo "no change"; exit 0; fi
+          git add index.html
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
           git commit -m "Update bulk board $(TZ=Europe/Amsterdam date '+%Y-%m-%d %H:%M') (Amsterdam) via eBay API"
           git push

@@ -1,2 +1,3 @@
-api_sweep_latest.json
 __pycache__/
+sweep.py
+src/
