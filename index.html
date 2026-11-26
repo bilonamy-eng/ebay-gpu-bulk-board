@@ -52,9 +52,9 @@ a:hover{text-decoration:underline}
     <p class="sub">美国 eBay，送到 19713，仅美国发货。只列可买数量超过 10 的（含 eBay 只显示“超过 10 件”的）、总价不超过目标价 130% 的显卡和内存。</p>
   </header>
   <div class="meta">
-    <span>查询时间（阿姆斯特丹）<b>2026-11-26 01:03</b></span>
-    <span>本轮 <b>18 次搜索 · 210 次库存读取 · 0 个错误 · 用时 33 秒（eBay 官方 API）</b></span>
-    <span>增量 <b>合格 10 条（上轮 10 条）；新出现 0 条；消失 0 条</b></span>
+    <span>查询时间（阿姆斯特丹）<b>2026-11-26 08:48</b></span>
+    <span>本轮 <b>18 次搜索 · 212 次库存读取 · 0 个错误 · 用时 26 秒（eBay 官方 API）</b></span>
+    <span>增量 <b>合格 9 条（上轮 10 条）；新出现 0 条；消失 1 条</b></span>
     <span>候选 <b id="cnt"></b> 条</span>
   </div>
   <section id="buy" aria-live="polite"></section>
@@ -70,7 +70,7 @@ a:hover{text-decoration:underline}
       <li>总价 = 商品价 + 邮费。价格上限 = 目标价 ×1.30；目标价和“超目标 %”按每个型号单独设置。本轮没有目标价以内的商品。</li>
       <li>数量门槛：可买数量超过 10。eBay 有时只给下限（“超过 10 件”），真实库存看不出来，页面标“10+（上限显示）”。</li>
       <li>本轮新出现：无。</li>
-      <li>本轮消失（售出、下架、涨价或数量降到 10 以下）：无。</li>
+      <li>本轮消失（售出、下架、涨价或数量降到 10 以下）：334997547855。</li>
       <li>数据来自 eBay 官方 Browse API，每小时自动更新（阿姆斯特丹 8:00–02:00）。API 不提供“Buy N or more”阶梯价，本页只按单件价判断，阶梯价能进上限的商品可能漏掉。</li>
       <li>照片、风扇和卖家注册时间 API 不提供；注册时间只沿用以前查到的。购买前请在商品页确认。</li>
       <li>已排除：坏件、配件（支架、挡板、散热片等）、笔记本/MXM 模块、无风扇被动卡、4Rx4 / LRDIMM 内存、只能自提的商品。</li>
@@ -80,9 +80,9 @@ a:hover{text-decoration:underline}
 
 <script>
 // [型号, itemId, 总价, 目标价, 数量文本, 售出数, 卖家反馈, 标题]
-var PS={"227631888545":["999.99","Free"],"227631916779":["999.99","Free"],"227631929425":["999.99","Free"],"227632084289":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2,379.99","Free"],"286077522287":["2,699.00","Free"],"335021373702":["170.00","Free"],"334997547855":["89.00","Free"],"168850935921":["89.99","Free"]};
-var SM={"227631888545":["smartresale",""],"227631916779":["smartresale",""],"227631929425":["smartresale",""],"227632084289":["smartresale",""],"198739463304":["cirkadis","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"286077522287":["egoods.supply",""],"335021373702":["munimetal",""],"334997547855":["munimetal",""],"168850935921":["cartridge_man07",""]};
-var D=[["RTX 6000","227631888545",999.99,800,"40a BO","0","31645 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5g150-0510-506 F - Tested & Working"],["RTX 6000","227631916779",999.99,800,"39a BO","0","31645 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-508 L - Tested & Working"],["RTX 6000","227631929425",999.99,800,"16a BO","0","31645 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-506 E - Tested & Working"],["RTX 6000","227632084289",999.99,800,"11a BO","0","31645 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-506 B - Tested & Working"],["A2000","198739463304",349.99,310,"10+a","0","19314 / 99.9%","Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],["A5000","126888400088",2379.99,2100,"10+a BO","37","48058 / 99.7%","NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],["A5000","286077522287",2699.0,2100,"10+a BO","25","27226 / 99.9%","Nvidia Quadro RTX A5000 24GB GDDR6 PCIe 4.0 x16 Graphics Card"],["P4000","335021373702",170.0,140,"10+a BO","251","8935 / 99.5%","NVIDIA QUADRO P4000 8GB GDDR5 x4 DP Video Graphics Card"],["P2000","334997547855",89.0,70,"10+a BO","270","8935 / 99.5%","Nvidia Quadro P2000 Graphics Card 5GB GDDR5 1024 CUDA Cores Pascal GPU 4x DP 1.4"],["P2000","168850935921",89.99,70,"10+a","1","29390 / 99.8%","HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"]];
+var PS={"227631888545":["999.99","Free"],"227631916779":["999.99","Free"],"227631929425":["999.99","Free"],"227632084289":["999.99","Free"],"198739463304":["349.99","Free"],"126888400088":["2,379.99","Free"],"286077522287":["2,699.00","Free"],"335021373702":["170.00","Free"],"168850935921":["89.99","Free"]};
+var SM={"227631888545":["smartresale",""],"227631916779":["smartresale",""],"227631929425":["smartresale",""],"227632084289":["smartresale",""],"198739463304":["cirkadis","Nov 02, 2018"],"126888400088":["wazno","Jul 18, 2014"],"286077522287":["egoods.supply",""],"335021373702":["munimetal",""],"168850935921":["cartridge_man07",""]};
+var D=[["RTX 6000","227631888545",999.99,800,"40a BO","0","31653 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5g150-0510-506 F - Tested & Working"],["RTX 6000","227631916779",999.99,800,"39a BO","0","31653 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-508 L - Tested & Working"],["RTX 6000","227631929425",999.99,800,"16a BO","0","31653 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-506 E - Tested & Working"],["RTX 6000","227632084289",999.99,800,"11a BO","0","31653 / 99.7%","Nvidia Quadro RTX 6000 - 24GB - GDDR6 - 699-5G150-0510-506 B - Tested & Working"],["A2000","198739463304",349.99,310,"10+a","0","19315 / 99.9%","Dell NVIDIA RTX A2000 6GB GDDR6 Graphics Video Card GPU W4KXH High Profile"],["A5000","126888400088",2379.99,2100,"10+a BO","37","48095 / 99.7%","NVIDIA RTX A5000 24GB GDDR6 VCNRTXA5000-PB Graphics Card"],["A5000","286077522287",2699.0,2100,"10+a BO","25","27238 / 99.9%","Nvidia Quadro RTX A5000 24GB GDDR6 PCIe 4.0 x16 Graphics Card"],["P4000","335021373702",170.0,140,"10+a BO","251","8941 / 99.5%","NVIDIA QUADRO P4000 8GB GDDR5 x4 DP Video Graphics Card"],["P2000","168850935921",89.99,70,"10+a","1","29401 / 99.8%","HP Nvidia Quadro P2000 5GB GDDR5 4x DP PCIe Graphics Card GPU 919988-002"]];
 function pr(r){var x=PS[r[1]];if(!x)return"—";return"$"+x[0]+(x[1]==="Free"?"（免运费）":x[1]==="?"?"（运费未显示）":"（运费 $"+x[1].replace("US $","")+"）")}
 function sel(r){var x=SM[r[1]]||[];var n=(x[0]&&x[0]!=="?")?x[0]:"卖家名未显示";return n+"<span class=\"t\">注册："+(x[1]||"未显示")+" · 反馈 "+r[6]+"</span>"}
 var ORDER=["RTX 4000","RTX 5000","RTX 6000","A2000","A4000","A5000","A6000","RTX 4000 Ada","RTX 5000 Ada","RTX 6000 Ada","RTX 5880 Ada","P4000","T1000 4GB","T1000 8GB","P2000","P2200","P1000","DDR4 ECC 32GB"];
