@@ -1,7 +1,7 @@
 name: eBay API bulk sweep
 on:
   schedule:
-    - cron: "32,52 * * * *"   # 每小时两次检查；只有行情板仓库有新一轮数据时才更新，不调用 eBay API
+    - cron: "7,22,37,52 * * * *"   # 每小时两次检查；只有行情板仓库有新一轮数据时才更新，不调用 eBay API
   workflow_dispatch:
 permissions:
   contents: write
